@@ -27,7 +27,9 @@
         "android.permission.WRITE_EXTERNAL_STORAGE",
         "android.permission.RECORD_AUDIO"
       ],
-      "package": "com.matrix.cardVerificationApp"
+      "package": "com.matrix.cardVerificationApp",
+      "versionCode": 1,
+      "label": "Card Verification" 
     },
     "web": {
       "bundler": "metro",
