@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Card Verification App",
-    "slug": "pak_identity",
+    "slug": "card_verification_app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -22,14 +22,12 @@
       },
       "edgeToEdgeEnabled": true,
       "permissions": [
-        "CAMERA",
-        "READ_EXTERNAL_STORAGE",
-        "WRITE_EXTERNAL_STORAGE",
-        "CAMERA",
-        "READ_EXTERNAL_STORAGE",
-        "WRITE_EXTERNAL_STORAGE"
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO"
       ],
-      "package": "com.anonymous.PAKCARD"
+      "package": "com.matrix.cardVerificationApp"
     },
     "web": {
       "bundler": "metro",
@@ -56,6 +54,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "c45008bd-28ac-4b66-a9e8-e9e1cccbd38f"
+      }
+    },
+    "owner": "mraheelios"
   }
 }
