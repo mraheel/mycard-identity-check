@@ -7,7 +7,7 @@ import "react-native-reanimated";
 
 export default function RootLayout() {
 
-  const onlyShowVerificationScreen: boolean = false;
+  const onlyShowVerificationScreen: boolean = true;
   const [fontsLoaded] = useFonts({
     SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
   });
@@ -35,7 +35,7 @@ export default function RootLayout() {
             <Stack.Screen
               name="index"
               options={{
-                title: "Verification",
+                title: "Card Verification",
               }}
             />
           </Stack>
@@ -44,25 +44,28 @@ export default function RootLayout() {
             <Drawer.Screen
               name="index"
               options={{
-                drawerLabel: "Verification",
-                title: "Verification",
+                drawerLabel: "Card Verification",
+                title: "Card Verification",
               }}
             />
             
-                  <Drawer.Screen
-                    name="card/CardsList"
-                    options={{
-                      drawerLabel: "Cards Listing",
-                      title: "Cards Listing",
-                    }}
-                  />
-                  <Drawer.Screen
-                    name="card/AddCard"
-                    options={{
-                      drawerLabel: "Add Card",
-                      title: "Add Card",
-                    }}
-                  />
+            <Drawer.Screen
+              name="card/CardsList"
+              options={{
+                drawerLabel: "Cards Listing",
+                title: "Cards Listing",
+                drawerItemStyle: { display: 'none' }
+              }}
+            />
+
+            
+            <Drawer.Screen
+              name="card/AddCard"
+              options={{
+                drawerLabel: "Add Card",
+                title: "Add Card",
+              }}
+            />
               
           </Drawer>
         )
